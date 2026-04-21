@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="Account Weather" icon-name="utility:world">
+        <div class="slds-p-around_medium">
+            <template if:true={weatherData}>
+                <div class="slds-grid slds-grid_vertical-align-center slds-grid_align-center">
+                    <img src={iconUrl} alt="Weather Icon" style="width: 80px;"/>
+                    <div class="slds-m-left_medium">
+                        <p class="slds-text-heading_large">{tempCelsius}°C</p>
+                        <p class="slds-text-title_caps">{weatherDescription}</p>
+                    </div>
+                </div>
+            </template>
+
+            <template if:true={error}>
+                <p class="slds-text-color_error">{error}</p>
+            </template>
+        </div>
+    </lightning-card>
+</template>
